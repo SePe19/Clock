@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isItNodeDay(i) {
+            const day = new Date();
+
+            if(day.getDate() == 2) {
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode("Yaaaay! node time");
+                newDiv.appendChild(newContent);
+                const currentDiv = document.getElementById("div1");
+                document.body.insertBefore(newDiv, currentDiv);
+            } else {
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode("Not yet :(");
+                newDiv.appendChild(newContent);
+                const currentDiv = document.getElementById("div2");
+                document.body.insertBefore(newDiv, currentDiv);
+            }
+        }
+        isItNodeDay();
+    </script>
+</body>
+</html>
